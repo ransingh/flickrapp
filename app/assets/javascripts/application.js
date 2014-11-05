@@ -13,4 +13,26 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
 //= require_tree .
+
+
+$(document).ready(function () {
+
+  // Set a variable that is set to the div containing the overlay (created on page load)
+  var page_overlay = jQuery('<div id="overlay"> </div>');
+
+  // Function to Add the overlay to the page
+  function showOverlay(){
+    page_overlay.appendTo($("#search_result"));
+  }
+  // Function to Remove the overlay from the page
+  function hideOverlay(){
+    page_overlay.remove();
+  }
+
+  $('button.btn-success').click(function() {
+    $('div.alert').remove();
+    $(showOverlay);
+  });
+});

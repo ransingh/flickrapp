@@ -1,0 +1,17 @@
+<%= form_tag('/photos/search/', :method => :get)  do -%>
+<div class="row">
+   <div class="col-lg-12">
+     <div class="input-group">
+       <%= text_field_tag('query','', :class => "form-control", :placeholder => 'Enter your query here.')%>
+       <span class="input-group-btn">
+         <%= button_tag "Search",:name => "search", :class=>"btn btn-success has-spinner", :style=>"width:200px" do -%>
+            <%= content_tag(:span, :class => 'spinner') do -%>
+              <%= content_tag(:i, '',:class => 'icon-spin icon-refresh') %>
+            <% end -%>
+            Search!
+         <% end -%>
+       </span>
+     </div><!-- /input-group -->
+   </div><!-- /.col-lg-6 -->
+ </div><!-- /.row -->
+<% end -%>

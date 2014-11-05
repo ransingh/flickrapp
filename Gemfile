@@ -6,6 +6,13 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+# Used to make http calls to Flickr API
+gem 'rest-client'
+
+# Use pagination
+gem 'kaminari'
+gem 'kaminari-bootstrap', '~> 3.0.1'
+
 # Use bootstrap for HTML/CSS
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
@@ -30,9 +37,6 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-
-# Use Flickr API
-gem 'flickraw'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

@@ -1,0 +1,10 @@
+$('.modal-title').text('<%= @photo.title%>');
+$('.modal-body').append('<%= image_tag(@photo.large_photo_url, :class =>"img-responsive center-block") %>');
+$('#myModal').modal('show');
+
+$('#myModal').on('hidden.bs.modal', function (e) {
+  $('.modal-title').empty();
+  $('.modal-body').empty();
+})
+
+$('#overlay').remove();

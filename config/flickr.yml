@@ -1,0 +1,10 @@
+development: &default
+  key: 8d4ff58fed5c31b1a25e63a505362d45
+  secret: ca162fb2a3af640d
+  service_url: 'https://api.flickr.com/services/rest/'
+  results_per_page: 10
+test:
+  :<< default
+production:
+  key: 8d4ff58fed5c31b1a25e63a505362d45
+  secret: ca162fb2a3af640d

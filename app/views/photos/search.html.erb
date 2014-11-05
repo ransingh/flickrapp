@@ -1,0 +1,26 @@
+<%= render 'photo_view'%>
+
+<%= render 'shared/search'%>
+
+</br>
+
+<%= bootstrap_flash_message(flash) %>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h4 class="panel-title">Search results</h4>
+  </div>
+  <div id="search_result" class="panel-body" style="width:100%;height:1000px">
+    <% if @photos && !@photos.empty? %>
+     <%= photo_list(@photos) %>
+    <% end%>
+  </div>
+
+ <% if @photos && !@photos.empty? %>
+  <div class="container">
+    <div class="span12">
+      <%= paginate @photos %>
+    </div>
+  </div>
+  <% end%>
+</div>

@@ -39,7 +39,7 @@ Flickrapp::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
@@ -53,4 +53,11 @@ Flickrapp::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  resources 'photos' , only: :show do
+    collection do
+      get 'search'
+    end
+  end
+
+  root 'photos#index'
 end
